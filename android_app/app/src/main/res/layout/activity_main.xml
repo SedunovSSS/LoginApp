@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/black">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LoginApp"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginTop="42dp"
+        android:textColor="@color/white"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView2"
+        android:name="com.sedunovsss.fragmenttest.Login"
+        android:layout_width="341dp"
+        android:layout_height="301dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="190dp"
+        tools:layout="@layout/fragment_login" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fragmentContainerView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/red"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/showUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginStart="84dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="149dp"
+        android:textColor="@color/white"
+        android:text="@string/user_not_logged_in" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/regButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/logButton"
+            android:background="@color/black"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/ic_baseline_registration_24" />
+
+        <ImageButton
+            android:id="@+id/logButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/delButton"
+            android:background="@color/black"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/ic_baseline_login_24" />
+
+        <ImageButton
+            android:id="@+id/delButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/logoutButton"
+            android:background="@color/black"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+        <ImageButton
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/changeButton"
+            android:background="@color/black"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/ic_baseline_logout_24" />
+
+        <ImageButton
+            android:id="@+id/changeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:layout_marginEnd="12dp"
+            app:srcCompat="@drawable/reset_password" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FragmentTest</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="user_not_logged_in">User not logged in</string>
+    <string name="server_address">http://192.168.1.34:1000</string>
+</resources>
